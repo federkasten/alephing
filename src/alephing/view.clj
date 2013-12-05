@@ -7,12 +7,12 @@
                        [22 134 109]
                        [16 54 54]])
 
+(def ^:private pongs (ref []))
+
 (defn- setup []
   (smooth)
   (frame-rate 30)
   (background 0))
-
-(def pongs (ref []))
 
 (defn- draw []
   (background 0)
