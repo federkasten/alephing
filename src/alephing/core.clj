@@ -19,8 +19,7 @@
 
 (defn connect []
   (let [c (websocket-client {:url (server-uri)})
-        ch (wait-for-result c)
-        name (str "cli" (System/currentTimeMillis))]
+        ch (wait-for-result c)]
     (receive-all ch handler)
     {:client c
      :channel ch
