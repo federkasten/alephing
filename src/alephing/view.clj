@@ -16,6 +16,7 @@
 
 (defn- draw []
   (background 0)
+  (text "click inside this window to send ping" 140 250)
   (doseq [p @pongs]
     (apply stroke (:color p))
     (stroke-weight 3)
