@@ -22,8 +22,7 @@
         ch (wait-for-result c)]
     (receive-all ch handler)
     {:client c
-     :channel ch
-     :name name}))
+     :channel ch}))
 
 (defn ping [c data]
   (enqueue (:channel c) (pr-str data)))
